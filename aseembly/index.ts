@@ -29,29 +29,27 @@ export function addProduct(product: Product): void {
     } 
     productsStorage.set(product.id, Product.fromPayload(product)); //Will add the Producto to the Map of products
 }
-
-// Method to get all Products
+//Este metodo sirve para obtener todos los productos 
 export function getAllProducts(): Array<Product> {
-    return productsStorage.values(); //Return his values- in the front we will inject the values
+    return productsStorage.values(); //Devuelve sus valores - en el frente inyectaremos los valores.
 }
 
-// @Param ID: Is the ID of product to find
+// @Param ID: Es el ID del producto a buscar 
 export function getProduct(id: string): Product | null {
     return productsStorage.get(id);
 }
 
-
-// METHOD CLIENTS
-// @Param ID: Is the ID of Client to find
+//Este es el metodo de clientes 
+// @Param ID: Es el ID del cliente a buscar 
 export function getClient(id: string): Product | null {
     return clientsStorage.get(id);
 }
 
-//Métthod to add a Client
+//Metodo para agregar a los clientes 
 export function addClient(client: Client): void {
-    let storedClient = clientsStorage.get(client.id); //Serch the client in the Map 
-    if (storedClient !== null) { //If is different to NULL the Clent is ready
-        throw new Error(`El ID: ${client.id} ya existe en nuestro inventario`); //Message
+    let storedClient = clientsStorage.get(client.id); //Busca a un cliente en el mapa 
+    if (storedClient !== null) { //Si es diferentes a NULL el Clent esta listo
+        throw new Error(`El ID: ${client.id} ya existe en nuestro inventario`); //mMuestra el mensaje 
     } 
-    productsStorage.set(client.id,Client.loadClient(client)); //Will add the Producto to the Map of products
+    productsStorage.set(client.id,Client.loadClient(client)); //Se agrega el producto al mapa de productos 
 }
