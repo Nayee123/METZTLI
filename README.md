@@ -32,9 +32,6 @@ Ya tenemos todo lo que necesitamos para probar nuestro contrato inteligente. Aho
 5. Por último, si queremos ejecutar los tests desarrollados, podemos hacerlo ejecutando ```yarn test```
    
 
-## Author
-
-- [Luis Carlos Rendon Aparicio(CxrlosMX)](https://github.com/cxrlosmx)
 
 ## Contact with me
 
